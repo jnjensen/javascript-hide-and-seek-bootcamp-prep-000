@@ -19,15 +19,13 @@ function deepestChild(){
  /* var child = document.getElementById('grand-node').querySelectorAll('div');
   var i = child.length*/
   
-  let node = document.getElementById('grand-node')
-  let nextNode = node.children[0]
-
-  while (nextNode) {
-    node = nextNode
-    nextNode = node.children[0]
+  var lis=document.getElementById("grand-node").querySelectorAll("div");
+  var test;
+  for(let i=0;i<lis.length-1;i++) {
+    test=lis[i].querySelector("div");
   }
-  
-  return nextNode.innerHTML
+return test;
+  }
 }
 
 
